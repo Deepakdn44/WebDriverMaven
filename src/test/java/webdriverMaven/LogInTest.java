@@ -19,7 +19,7 @@ public class LogInTest {
 	public void setUp() {
 		WebDriverManager.firefoxdriver().setup();
 		driver = new FirefoxDriver();
-
+		
 	}
 
 	@Test
@@ -31,6 +31,8 @@ public class LogInTest {
 		driver.findElement(By
 				.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/span/span"))
 				.click();
+		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div[1]/input")).sendKeys("Virat18@444");
+		driver.findElement(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/span/span")).click();
 	}
 
 	@AfterSuite
